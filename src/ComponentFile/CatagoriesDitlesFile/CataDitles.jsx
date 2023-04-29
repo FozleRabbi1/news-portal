@@ -1,8 +1,10 @@
 // import { useState } from "react";
 import { Card } from "react-bootstrap";
-import { FaRegStar, FaStar } from "react-icons/fa";
-import Rating from "react-rating";
+// import { FaRegStar, FaStar } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import '@smastrom/react-rating/style.css'
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 
 const CataDitles = () => {
@@ -48,12 +50,13 @@ const CataDitles = () => {
                             <div className=" flex-grow-1 ">
                                 {
                                     <p>
-                                        <Rating
+                                        <Rating style={{ maxWidth: 100 }} value={ Math.round(data.rating.number || 0) } />
+                                        {/* <Rating
                                             placeholderRating={data.rating.number}
                                             emptySymbol={ <FaRegStar></FaRegStar> }
                                             placeholderSymbol={ <FaStar className="text-warning"></FaStar> }
                                             fullSymbol={ <FaStar></FaStar> }
-                                        ></Rating>
+                                        ></Rating> */}
 
                                         <span className="ps-1">{data.rating.number}</span> </p>
                                 }

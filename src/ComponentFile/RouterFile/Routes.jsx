@@ -28,7 +28,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: ":id", element: <CataDitles></CataDitles>,
-                loader: ({ params }) => fetch(`http://localhost:5000/catagories/${params.id}`)
+                loader: ({ params }) => fetch(`https://news-portal-server-fozlerabbi1.vercel.app/catagories/${params.id}`)
+                // loader: ({ params }) => fetch(`http://localhost:5000/catagories/${params.id}`)
             }
         ]
     },
@@ -37,7 +38,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: ":id", element: <PrivateRoute> <News></News> </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
+                loader: ({ params }) => fetch(`https://news-portal-server-fozlerabbi1.vercel.app/news/${params.id}`)
+                // loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
             }
         ]
     }

@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 const LeftNav = () => {
     const [datas, setDatas] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/catagories")
+        fetch("https://news-portal-server-fozlerabbi1.vercel.app/catagories")
+        // fetch("http://localhost:5000/catagories")
             .then(res => res.json())
             .then(data => setDatas(data))
             .catch(err => console.error(err.message))
