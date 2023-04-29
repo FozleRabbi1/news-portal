@@ -1,0 +1,12 @@
+.find-as-on .listGroup .span {
+    display: flex;
+    align-items: center;
+}
+.find-as-on .listGroup .span .icone {
+    background-color: rgb(209, 245, 245);    
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: blue;
+}
